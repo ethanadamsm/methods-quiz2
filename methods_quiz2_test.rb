@@ -11,6 +11,10 @@ class MethodsQuizTest < MiniTest::Test
    	end.new
 	end
 
-	# TODO - write tests here
+	def test_without_doubles
+		assert_equal 5, @m.without_doubles(2, 2)
+		assert_equal 6, @m.without_doubles(2, 4)
+		assert_equal 7,@m.without_doubles(6, 6)
+	end
 
 end
