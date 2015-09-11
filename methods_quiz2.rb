@@ -13,19 +13,23 @@ module MethodsQuiz2
 	end
 
 	def max_maybe(a, b)
-		if is_equal?(a, b)
+		if a == b
 			0 
 		else
 			if divisable_5?(a) && divisable_5?(b)
-				smaller?(a, b) ? a : b
+				a < b ? a : b
 			else
-				smaller?(a, b) ? b : a 
+				a < b ? b : a 
 			end
 		end
 	end
 
-	def smaller?(a, b)
-		a < b 
+	def squirrels_play?(temp, season)
+		season ? squirrel_temps?(60, 100, temp)	: squirrel_temps?(60, 90, temp)
+	end
+
+	def squirrel_temps?(lowerl, higherl, temp)
+		temp >= lowerl && temp <= higherl
 	end
 
 	def divisable_5?(x)
