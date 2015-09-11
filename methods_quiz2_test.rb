@@ -39,13 +39,8 @@ class MethodsQuizTest2 < MiniTest::Test
 		assert_equal 10, @m.red_ticket(2, 2, 2)
 		assert_equal 5, @m.red_ticket(1, 1, 1)
 		assert_equal 5, @m.red_ticket(0, 0, 0)
-		assert_equal 1, @m.red_ticket(0, 1, 2)
-		assert_equal 1, @m.red_ticket(0, 2, 1)
-		assert_equal 1, @m.red_ticket(1, 0, 2)
-		assert_equal 1, @m.red_ticket(1, 2, 0)
-		assert_equal 1, @m.red_ticket(2, 0, 1)
-		assert_equal 1, @m.red_ticket(2, 1, 0)
-		assert_equal 0, @m.red_ticket(0, 1, 1)
+		assert_equal 1, @m.red_ticket(0, 1, 1)
+		assert_equal 0, @m.red_ticket(1, 2, 0)
 	end
 
 end

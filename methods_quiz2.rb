@@ -28,6 +28,18 @@ module MethodsQuiz2
 		season ? squirrel_temps?(60, 100, temp)	: squirrel_temps?(60, 90, temp)
 	end
 
+	def red_ticket(a, b, c)
+		if a == b && b == c && a == 2
+			10
+		elsif a == b && b == c
+			5
+		elsif b == c && a != b
+			1
+		else
+			0			
+		end
+	end
+
 	def squirrel_temps?(lowerl, higherl, temp)
 		temp >= lowerl && temp <= higherl
 	end
