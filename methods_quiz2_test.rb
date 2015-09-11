@@ -17,4 +17,11 @@ class MethodsQuizTest2 < MiniTest::Test
 		assert_equal 7,@m.without_doubles(6, 6)
 	end
 
+	def test_max_maybe
+		assert_equal 7, @m.max_maybe(6, 7)
+		assert_equal 5, @m.max_maybe(5, 10)
+		assert_equal 0, @m.max_maybe(6, 6)
+		assert_equal 0, @m.max_maybe(10, 10)
+	end 
+
 end
