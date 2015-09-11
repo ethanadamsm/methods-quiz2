@@ -4,7 +4,7 @@ Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 
 require_relative 'methods_quiz2'
 
-class MethodsQuizTest < MiniTest::Test
+class MethodsQuizTest2 < MiniTest::Test
 	def setup
 		@m = Class.new do
      include MethodsQuiz2
